@@ -1,0 +1,67 @@
+<Window
+    x:Class="MNISTSample.Views.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="using:MNISTSample.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:MNISTSample.Views.Design"
+    Title="MNISTSample"
+    Width="700"
+    Height="450"
+    Icon="/Assets/avalonia-logo.ico"
+    mc:Ignorable="d">
+
+    <Design.DataContext>
+        <vm:DesignMainWindowViewModel />
+    </Design.DataContext>
+
+    <TabControl>
+        <TabItem Header="Train">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Orientation="Horizontal">
+                    <Button Command="{Binding TrainCommand}">Train</Button>
+                    <Button Command="{Binding StopCommand}">Stop</Button>
+                </StackPanel>
+                <ListBox Grid.Row="1" Items="{Binding TrainingOutput}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" TextWrapping="Wrap" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <StackPanel Grid.Row="2" Orientation="Horizontal">
+                    <Button Command="{Binding SaveCommand}">Save</Button>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Test">
+            <StackPanel>
+                <Button Command="{Binding RestoreCommand}">Restore</Button>
+                <c:SketchPad
+                    Name="SketchPad"
+                    Width="280"
+                    Height="280"
+                    Sketch="{Binding Sketch, Mode=TwoWay}" />
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Button Command="{Binding ClearCommand}">Clear</Button>
+                    <Button Command="{Binding TestCommand}">Test</Button>
+                </StackPanel>
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="24"
+                    Text="{Binding Guess}" />
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Text="{Binding Result}" />
+            </StackPanel>
+        </TabItem>
+    </TabControl>
+</Window>

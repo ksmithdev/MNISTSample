@@ -29,6 +29,9 @@
     <PackageReference Include="XamlNameReferenceGenerator" Version="1.4.2" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TurtleML\TurtleML\TurtleML.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <None Update="DataSets\*.gz">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

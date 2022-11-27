@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MNISTSample", "MNISTSample\MNISTSample.csproj", "{8BF8B083-C870-456E-905F-64D3479905AF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurtleML", "TurtleML\TurtleML\TurtleML.csproj", "{6BB1E9E0-DF61-4C46-8DAE-4269AAA301A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,14 @@ Global
 		{8BF8B083-C870-456E-905F-64D3479905AF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8BF8B083-C870-456E-905F-64D3479905AF}.Release|x64.ActiveCfg = Release|Any CPU
 		{8BF8B083-C870-456E-905F-64D3479905AF}.Release|x64.Build.0 = Release|Any CPU
+		{6BB1E9E0-DF61-4C46-8DAE-4269AAA301A5}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{6BB1E9E0-DF61-4C46-8DAE-4269AAA301A5}.Debug|Any CPU.Build.0 = Debug|x64
+		{6BB1E9E0-DF61-4C46-8DAE-4269AAA301A5}.Debug|x64.ActiveCfg = Debug|x64
+		{6BB1E9E0-DF61-4C46-8DAE-4269AAA301A5}.Debug|x64.Build.0 = Debug|x64
+		{6BB1E9E0-DF61-4C46-8DAE-4269AAA301A5}.Release|Any CPU.ActiveCfg = Release|x64
+		{6BB1E9E0-DF61-4C46-8DAE-4269AAA301A5}.Release|Any CPU.Build.0 = Release|x64
+		{6BB1E9E0-DF61-4C46-8DAE-4269AAA301A5}.Release|x64.ActiveCfg = Release|x64
+		{6BB1E9E0-DF61-4C46-8DAE-4269AAA301A5}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
